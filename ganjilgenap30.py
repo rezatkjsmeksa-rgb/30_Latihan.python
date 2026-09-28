@@ -21,3 +21,28 @@ def cek_prima():
             print("Bilangan prima")
     else:
         print("Bukan bilangan prima")
+
+
+def main():
+    while True:
+        print("\n===== MENU =====")
+        print("1. Cek Ganjil/Genap")
+        print("2. Cek Bilangan Prima")
+        print("3. Keluar")
+        pilihan = input("Pilih menu (1/2/3): ")
+
+        try:
+            if pilihan == "1":
+                cek_bilangan()
+            elif pilihan == "2":
+                cek_prima()
+            elif pilihan == "3":
+                print("Program selesai. Terima kasih!")
+                break
+            else:
+                print("Pilihan tidak valid, coba lagi.")
+        except ValueError:
+            print("Input harus berupa angka bulat!")
+
+
+main()
